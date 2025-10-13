@@ -30,16 +30,21 @@ config:
       createIfNotExists:
         label: 'Site administrator'
       grantPermissions:
-        - 'create event content'
-        - 'create location content'
-        - 'delete any event content'
-        - 'delete any location content'
-        - 'edit any event content'
-        - 'edit any location content'
-        - 'configure editable event node layout overrides'
-        - 'use text format basic_html'
-        - 'use text format summary_fields'
+        - 'create ride content'
+        - 'create recurring_ride content'
+        - 'delete any ride content'
+        - 'delete any recurring_ride content'
+        - 'edit any ride content'
+        - 'edit any recurring_ride content'
+        - 'use text format ride_page'
     user.role.rides_coordinator:
       createIfNotExists:
         label: 'Rides coordinator'
       grantPermissions:
+        - 'create ride content'
+        - 'create recurring_ride content'
+        - 'delete any ride content'
+        - 'delete any recurring_ride content'
+        - 'edit any ride content'
+        - 'edit any recurring_ride content'
+        - 'use text format ride_page'
