@@ -20,7 +20,7 @@ install:
   - webform_views
   - webform_views_extras
   #Custom
-  - bikeclub_ride
+  - bikeclub_ride_tools
 config:
   strict: false
   import:

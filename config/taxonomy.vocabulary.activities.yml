@@ -1,6 +1,5 @@
 langcode: en
 status: true
-dependencies { }
 name: Activities
 vid: activities
 description: 'Types of activities listed on the calendar.'
