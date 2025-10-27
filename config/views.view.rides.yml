@@ -2,21 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_activity
-    - field.storage.node.field_date
-    - field.storage.node.field_datetime
-    - field.storage.node.field_dayofweek
-    - field.storage.node.field_location
-    - field.storage.node.field_ride_leader
     - node.type.recurring_dates
     - node.type.recurring_ride
     - node.type.ride
-    - system.menu.main
-    - taxonomy.vocabulary.activities
-    - user.role.administrator
-    - user.role.ride_leader
-    - user.role.rides_coordinator
-    - user.role.site_admin
   module:
     - add_content_by_bundle
     - address
@@ -478,15 +466,27 @@ display:
           row_class: '<h2>'
           default_row_class: true
           columns:
+            nid: nid
             title: title
-            field_activity: field_activity
-            field_datetime: field_datetime
-            field_date: field_datetime
+            type: type
             field_location: field_location
-            field_address_locality: field_address_locality
-            field_address_administrative_area: field_address_locality
+            field_dayofweek: field_dayofweek
+            field_datetime: field_datetime
+            field_datetime_1: field_datetime_1
+            field_ride_leader_1: field_ride_leader_1
+            name: name
+            status: status
+            changed: changed
+            operations: operations
           default: '-1'
           info:
+            nid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             title:
               sortable: true
               default_sort_order: asc
@@ -494,19 +494,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_activity:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_datetime:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_date:
+            type:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -520,16 +508,54 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_address_locality:
+            field_dayofweek:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_address_administrative_area:
+            field_datetime:
               sortable: false
               default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_datetime_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_ride_leader_1:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            status:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            changed:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            operations:
               align: ''
               separator: ''
               empty_column: false
@@ -1357,13 +1383,14 @@ display:
         description: ''
         weight: 0
         expanded: false
-        menu_name: admin
-        parent: club_ride.ride
+        menu_name: account
+        parent: ''
         context: '0'
         as_local_task: true
         local_task_link_title: 'Recurring dates'
         local_task_parent: 'views_view:view.rides.rides'
-        local_task_weight: 2
+        local_task_weight: 9
+        local_task_custom_parent_route: ''
       tab_options:
         type: normal
         title: Content
@@ -1717,7 +1744,7 @@ display:
           group_type: min
           admin_label: ''
           plugin_id: field
-          label: Dates
+          label: Start
           exclude: false
           alter:
             alter_text: true
@@ -1801,7 +1828,7 @@ display:
           group_type: max
           admin_label: ''
           plugin_id: field
-          label: 'Date - End'
+          label: End
           exclude: false
           alter:
             alter_text: true
@@ -2469,7 +2496,7 @@ display:
           empty: false
           content:
             value: "<strong>Before adding a ride with the above links, search to see if it exists.</strong><br>\r\nTo clone existing rides, select Clone under Operations or view the page and Clone. Do not change the ride name unless you are making substantial changes to the ride and routes."
-            format: full_html
+            format: basic_html
           tokenize: false
         result:
           id: result
@@ -2490,12 +2517,13 @@ display:
         weight: 0
         expanded: false
         menu_name: admin
-        parent: club_ride.ride
+        parent: system.admin_content
         context: '0'
         as_local_task: true
         local_task_link_title: 'Recurring rides'
         local_task_parent: 'views_view:view.rides.rides'
-        local_task_weight: 1
+        local_task_weight: 2
+        local_task_custom_parent_route: ''
       tab_options:
         type: normal
         title: Content
@@ -4296,7 +4324,7 @@ display:
           empty: false
           content:
             value: "<strong>Before adding a ride with the above links, search to see if it exists.</strong><br>\r\nTo clone existing rides, select Clone under Operations or view the page and Clone. Do not change the ride name unless you are making substantial changes to the ride and routes."
-            format: full_html
+            format: basic_html
           tokenize: false
         result:
           id: result
@@ -4323,6 +4351,7 @@ display:
         local_task_link_title: Rides
         local_task_parent: 'views_view:view.rides.rides'
         local_task_weight: 0
+        local_task_custom_parent_route: ''
       tab_options:
         type: normal
         title: Content

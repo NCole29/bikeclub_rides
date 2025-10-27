@@ -13,9 +13,10 @@ dependencies:
     - field.field.node.ride.field_lunch_place
     - field.field.node.ride.field_lunch_same
     - field.field.node.ride.field_multiple_times
+    - field.field.node.ride.field_registration_closing
+    - field.field.node.ride.field_registration_form
+    - field.field.node.ride.field_registration_limit
     - field.field.node.ride.field_registration_required
-    - field.field.node.ride.field_registration_rideform
-    - field.field.node.ride.field_results_access
     - field.field.node.ride.field_ride_leader
     - field.field.node.ride.field_ride_picture
     - field.field.node.ride.field_rwgps_routes
@@ -25,9 +26,11 @@ dependencies:
   module:
     - datetime
     - layout_builder
+    - layout_discovery
     - options
     - text
     - user
+    - webform
 third_party_settings:
   layout_builder:
     enabled: true
@@ -227,6 +230,60 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
+          cf3b2d67-20b8-4fbc-a8e3-eafd20a836fd:
+            uuid: cf3b2d67-20b8-4fbc-a8e3-eafd20a836fd
+            region: first
+            configuration:
+              id: 'field_block:node:ride:field_registration_form'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: webform_entity_reference_link
+                label: visually_hidden
+                settings:
+                  label: Register
+                  dialog: ''
+                  attributes:
+                    class:
+                      - button
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          30f53726-0284-4b04-bdf0-5e2b693512b1:
+            uuid: 30f53726-0284-4b04-bdf0-5e2b693512b1
+            region: first
+            configuration:
+              id: 'field_block:node:ride:field_registration_limit'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          1077d5cc-05b7-46f0-a456-6531a1b3f82c:
+            uuid: 1077d5cc-05b7-46f0-a456-6531a1b3f82c
+            region: first
+            configuration:
+              id: 'field_block:node:ride:field_registration_closing'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -319,15 +376,27 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
-  field_registration_form:
-    type: webform_entity_reference_entity_view
+  field_registration_closing:
+    type: datetime_default
     label: above
     settings:
-      source_entity: true
-      lazy: false
+      timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    weight: 14
-    region: content
+    weight: 21
+    region: first
+  field_registration_form:
+    type: webform_entity_reference_link
+    label: visually_hidden
+    settings:
+      label: Register
+      dialog: ''
+      attributes:
+        class:
+          - button
+    third_party_settings: {  }
+    weight: 19
+    region: first
   field_registration_free_form:
     type: webform_entity_reference_entity_view
     label: above
@@ -337,6 +406,15 @@ content:
     third_party_settings: {  }
     weight: 13
     region: content
+  field_registration_limit:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 20
+    region: first
   field_registration_link:
     type: link
     label: above
@@ -365,14 +443,6 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
-  field_rwgps_routes:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 9
-    region: content
   field_time:
     type: string
     label: above
@@ -386,7 +456,7 @@ hidden:
   field_developed_by: true
   field_multiple_times: true
   field_registration_required: true
-  field_registration_rideform: true
   field_ride_picture: true
+  field_rwgps_routes: true
   field_schedule_date: true
   links: true

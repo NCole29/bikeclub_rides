@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_registration_rideform
+    - field.storage.node.field_registration_form
     - node.type.ride
     - webform.webform.ride_registration
   module:
     - webform
-id: node.ride.field_registration_rideform
-field_name: field_registration_rideform
+id: node.ride.field_registration_form
+field_name: field_registration_form
 entity_type: node
 bundle: ride
 label: 'Registration form'
@@ -17,8 +17,8 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 21baa292-9cee-4758-848a-8c5723cbb789
-    default_data: ''
+    target_uuid: 617afa87-8967-4a23-a094-938d077b014d
+    default_data: null
     status: open
     open: ''
     close: ''

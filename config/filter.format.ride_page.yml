@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - bikeclub
+    - media
 name: 'Ride page'
 format: ride_page
 weight: 0
@@ -25,7 +26,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <blockquote> <a href> <ul> <ol reversed start> <li> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption>'
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <blockquote> <a href> <ul> <ol reversed start> <li> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-align>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_image_secure:
@@ -53,3 +54,13 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes: {  }
+      allowed_media_types:
+        document: document

@@ -4,8 +4,8 @@ dependencies:
   module:
     - datetime
     - node
-id: node.field_registration_closing_date
-field_name: field_registration_closing_date
+id: node.field_registration_closing
+field_name: field_registration_closing
 entity_type: node
 type: datetime
 settings:

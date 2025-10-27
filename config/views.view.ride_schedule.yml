@@ -2,9 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.club_schedule.field_schedule_date
-    - field.storage.node.field_activity
-    - field.storage.node.field_location
     - field.storage.node.field_ride_leader
   module:
     - address
@@ -162,9 +159,9 @@ display:
           separator: ', '
           field_api_classes: false
         field_schedule_date:
-          id: field_schedule_date
-          table: club_schedule__field_schedule_date
-          field: field_schedule_date
+          id: schedule_date
+          table: club_schedule
+          field: schedule_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -338,8 +335,8 @@ display:
       filters:
         field_schedule_date_value:
           id: field_schedule_date_value
-          table: club_schedule__field_schedule_date
-          field: field_schedule_date_value
+          table: club_schedule
+          field: schedule_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -508,8 +505,6 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags:
-        - 'config:field.storage.club_schedule.field_schedule_date'
   ride_schedule:
     id: ride_schedule
     display_title: 'Ride schedules'
@@ -586,8 +581,8 @@ display:
           field_api_classes: false
         field_schedule_date:
           id: field_schedule_date
-          table: club_schedule__field_schedule_date
-          field: field_schedule_date
+          table: club_schedule
+          field: schedule_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -1271,10 +1266,10 @@ display:
                 title: Saturday
                 operator: '='
                 value: Saturday
-        field_schedule_date_value:
-          id: field_schedule_date_value
-          table: club_schedule__field_schedule_date
-          field: field_schedule_date_value
+        schedule_date:
+          id: schedule_date
+          table: club_schedule
+          field: schedule_date
           relationship: none
           group_type: group
           admin_label: ''

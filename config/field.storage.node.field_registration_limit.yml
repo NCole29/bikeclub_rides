@@ -3,14 +3,14 @@ status: true
 dependencies:
   module:
     - node
-    - webform
-id: node.field_registration_rideform
-field_name: field_registration_rideform
+id: node.field_registration_limit
+field_name: field_registration_limit
 entity_type: node
-type: webform
+type: integer
 settings:
-  target_type: webform
-module: webform
+  unsigned: false
+  size: normal
+module: core
 locked: false
 cardinality: 1
 translatable: true
