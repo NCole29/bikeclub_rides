@@ -14,9 +14,9 @@ dependencies:
     - field.field.node.ride.field_lunch_place
     - field.field.node.ride.field_lunch_same
     - field.field.node.ride.field_multiple_times
-    - field.field.node.ride.field_registration_closing
-    - field.field.node.ride.field_registration_form
-    - field.field.node.ride.field_registration_limit
+    - field.field.node.ride.field_webform_closing
+    - field.field.node.ride.field_webform
+    - field.field.node.ride.field_webform_limit
     - field.field.node.ride.field_registration_required
     - field.field.node.ride.field_ride_leader
     - field.field.node.ride.field_ride_picture
@@ -353,9 +353,9 @@ hidden:
   field_lunch_same: true
   field_multiple_times: true
   field_nonmembers: true
-  field_registration_closing: true
-  field_registration_form: true
-  field_registration_limit: true
+  field_webform_closing: true
+  field_webform: true
+  field_webform_limit: true
   field_registration_required: true
   field_results_access: true
   field_ride_picture: true

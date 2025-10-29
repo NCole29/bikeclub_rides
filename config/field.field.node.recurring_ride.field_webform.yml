@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_registration_form
-    - node.type.ride
+    - field.storage.node.field_webform
+    - node.type.recurring_ride
     - webform.webform.ride_registration
   module:
     - webform
-id: node.ride.field_registration_form
-field_name: field_registration_form
+id: node.recurring_ride.field_webform
+field_name: field_webform
 entity_type: node
-bundle: ride
+bundle: recurring_ride
 label: 'Registration form'
-description: ''
+description: 'Do not schedule or close the webform for recurring rides because this will close the form for all ride dates.'
 required: false
 translatable: false
 default_value:

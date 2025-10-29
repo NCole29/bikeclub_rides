@@ -3,6 +3,7 @@ description: 'Provides Ride and Recurring ride content types.'
 type: 'Content type'
 recipes:
   - bikeclub_content_type_base
+  - bikeclub_field_storage_webform
   - bikeclub_locations
 install:
   # Core

@@ -13,9 +13,9 @@ dependencies:
     - field.field.node.ride.field_lunch_place
     - field.field.node.ride.field_lunch_same
     - field.field.node.ride.field_multiple_times
-    - field.field.node.ride.field_registration_closing
-    - field.field.node.ride.field_registration_form
-    - field.field.node.ride.field_registration_limit
+    - field.field.node.ride.field_webform_closing
+    - field.field.node.ride.field_webform
+    - field.field.node.ride.field_webform_limit
     - field.field.node.ride.field_registration_required
     - field.field.node.ride.field_ride_leader
     - field.field.node.ride.field_ride_picture
@@ -234,7 +234,7 @@ third_party_settings:
             uuid: cf3b2d67-20b8-4fbc-a8e3-eafd20a836fd
             region: first
             configuration:
-              id: 'field_block:node:ride:field_registration_form'
+              id: 'field_block:node:ride:field_webform'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -254,7 +254,7 @@ third_party_settings:
             uuid: 30f53726-0284-4b04-bdf0-5e2b693512b1
             region: first
             configuration:
-              id: 'field_block:node:ride:field_registration_limit'
+              id: 'field_block:node:ride:field_webform_limit'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -271,7 +271,7 @@ third_party_settings:
             uuid: 1077d5cc-05b7-46f0-a456-6531a1b3f82c
             region: first
             configuration:
-              id: 'field_block:node:ride:field_registration_closing'
+              id: 'field_block:node:ride:field_webform_closing'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -376,7 +376,7 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
-  field_registration_closing:
+  field_webform_closing:
     type: datetime_default
     label: above
     settings:
@@ -385,7 +385,7 @@ content:
     third_party_settings: {  }
     weight: 21
     region: first
-  field_registration_form:
+  field_webform:
     type: webform_entity_reference_link
     label: visually_hidden
     settings:
@@ -406,7 +406,7 @@ content:
     third_party_settings: {  }
     weight: 13
     region: content
-  field_registration_limit:
+  field_webform_limit:
     type: number_integer
     label: above
     settings:
