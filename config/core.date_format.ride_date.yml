@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ride_date
-label: 'Ride date'
-locked: false
-pattern: 'l, M d, Y - g:i a'
