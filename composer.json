@@ -18,7 +18,7 @@
   "require": {
     "bikeclub/bikeclub_content_type_base": "dev-main",
     "bikeclub/bikeclub_locations": "dev-main",
-	"drupal/calendar_view": "^2.1",
+    "drupal/calendar_view": "^2.1",
     "drupal/conditional_fields": "^4.0@alpha",		
     "drupal/datetimehideseconds": "^1.0",
     "drupal/smart_date": "^4.2",

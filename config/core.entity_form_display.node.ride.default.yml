@@ -13,15 +13,15 @@ dependencies:
     - field.field.node.ride.field_lunch_place
     - field.field.node.ride.field_lunch_same
     - field.field.node.ride.field_multiple_times
-    - field.field.node.ride.field_webform_closing
-    - field.field.node.ride.field_webform
-    - field.field.node.ride.field_webform_limit
     - field.field.node.ride.field_registration_required
     - field.field.node.ride.field_ride_leader
     - field.field.node.ride.field_ride_picture
     - field.field.node.ride.field_rwgps_routes
     - field.field.node.ride.field_schedule_date
     - field.field.node.ride.field_time
+    - field.field.node.ride.field_webform
+    - field.field.node.ride.field_webform_closing
+    - field.field.node.ride.field_webform_limit
     - node.type.ride
   module:
     - conditional_fields
@@ -246,58 +246,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_webform:
-    type: webform_entity_reference_select
-    weight: 30
-    region: content
-    settings:
-      default_data: false
-      webforms:
-        - ride_registration
-    third_party_settings:
-      conditional_fields:
-        e33b32aa-ec7c-4a67-b202-8bc8e48a29d8:
-          entity_type: node
-          bundle: ride
-          dependee: field_registration_required
-          settings:
-            state: visible
-            reset: false
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-  field_webform_limit:
-    type: number
-    weight: 32
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings:
-      conditional_fields:
-        acf6c45b-1b69-4d96-ab4f-46dcaed2a51c:
-          entity_type: node
-          bundle: ride
-          dependee: field_registration_required
-          settings:
-            state: visible
-            reset: false
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
   field_registration_required:
     type: boolean_checkbox
     weight: 29
@@ -358,6 +306,58 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
+  field_webform:
+    type: webform_entity_reference_select
+    weight: 30
+    region: content
+    settings:
+      default_data: false
+      webforms:
+        - ride_registration
+    third_party_settings:
+      conditional_fields:
+        e33b32aa-ec7c-4a67-b202-8bc8e48a29d8:
+          entity_type: node
+          bundle: ride
+          dependee: field_registration_required
+          settings:
+            state: visible
+            reset: false
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_webform_limit:
+    type: number
+    weight: 32
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        acf6c45b-1b69-4d96-ab4f-46dcaed2a51c:
+          entity_type: node
+          bundle: ride
+          dependee: field_registration_required
+          settings:
+            state: visible
+            reset: false
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
   status:
     type: boolean_checkbox
     weight: 1
@@ -393,8 +393,8 @@ hidden:
   field_cancel: true
   field_day: true
   field_dayofweek: true
-  field_webform_closing: true
   field_schedule_date: true
+  field_webform_closing: true
   path: true
   promote: true
   publish_on: true

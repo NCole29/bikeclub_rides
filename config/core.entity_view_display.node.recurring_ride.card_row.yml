@@ -23,7 +23,6 @@ dependencies:
     - field.field.node.recurring_ride.field_webform_limit
     - node.type.recurring_ride
   module:
-    - bikeclub
     - smart_date
     - text
     - user

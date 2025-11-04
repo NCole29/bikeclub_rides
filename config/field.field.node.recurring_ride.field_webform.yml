@@ -12,7 +12,7 @@ field_name: field_webform
 entity_type: node
 bundle: recurring_ride
 label: 'Registration form'
-description: 'Do not schedule or close the webform for recurring rides because this will close the form for all ride dates.'
+description: '<br><strong><big>Do not schedule or close the webform for recurring rides because this will close the form for all ride dates.</big></strong>'
 required: false
 translatable: false
 default_value:

@@ -33,10 +33,12 @@ elements: |-
     '#type': textfield
     '#title': Name
     '#title_display': inline
+    '#default_value': '[current-user:account-name] '
   email:
     '#type': email
     '#title': Email
     '#title_display': inline
+    '#default_value': '[current-user:mail]'
   date:
     '#type': hidden
     '#title': Date
