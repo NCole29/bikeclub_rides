@@ -16,6 +16,7 @@ install:
   - honeypot
   - smart_date
   - smart_date_recur
+  - views_year_filter
   - webform
   - webform_node
   - webform_options_limit
@@ -29,6 +30,9 @@ config:
   import:
     smart_date: '*'
   actions:
+    views_year_filter.settings:
+      simpleConfigUpdate:
+        use_bootstrap_datepicker: 1
     webform.settings:
       simpleConfigUpdate:
         default_submission_views:
@@ -56,21 +60,66 @@ config:
       createIfNotExists:
         label: 'Site administrator'
       grantPermissions:
-        - 'create ride content'
+        - 'add club_route entity'
+        - 'clone recurring_ride content'
+        - 'clone ride content'
         - 'create recurring_ride content'
-        - 'delete any ride content'
+        - 'create ride content'
         - 'delete any recurring_ride content'
-        - 'edit any ride content'
+        - 'delete any ride content'
+        - 'delete club_route entity'
         - 'edit any recurring_ride content'
+        - 'edit any ride content'
+        - 'edit club_route entity'
+        - 'edit club_schedule entity'
+        - 'enter waivers'
+        - 'revert recurring_ride revisions'
+        - 'revert ride revisions'
         - 'use text format ride_page'
+        - 'view club_schedule entity'
+        - 'view recurring_ride revisions'
+        - 'view ride revisions'
     user.role.rides_coordinator:
       createIfNotExists:
         label: 'Rides coordinator'
       grantPermissions:
-        - 'create ride content'
+        - 'add club_route entity'
+        - 'clone recurring_ride content'
+        - 'clone ride content'
         - 'create recurring_ride content'
-        - 'delete any ride content'
+        - 'create ride content'
         - 'delete any recurring_ride content'
-        - 'edit any ride content'
+        - 'delete any ride content'
+        - 'delete club_route entity'
         - 'edit any recurring_ride content'
+        - 'edit any ride content'
+        - 'edit club_route entity'
+        - 'edit club_schedule entity'
+        - 'enter waivers'
+        - 'revert recurring_ride revisions'
+        - 'revert ride revisions'
         - 'use text format ride_page'
+        - 'view club_schedule entity'
+        - 'view recurring_ride revisions'
+        - 'view ride revisions'
+    user.role.ride_leader:
+      createIfNotExists:
+        label: 'Ride leader'
+      grantPermissions:
+        - 'create ride content'
+        - 'add club_route entity'
+        - 'clone recurring_ride content'
+        - 'clone ride content'
+        - 'create recurring_ride content'
+        - 'create ride content'
+        - 'delete own recurring_ride content'
+        - 'delete own ride content'
+        - 'edit own recurring_ride content'
+        - 'edit own ride content'
+        - 'enter waivers'
+        - 'use text format ride_page'
+        - 'view club_schedule entity'
+        - 'view recurring_ride revisions'
+        - 'view ride revisions'
+
+ 
