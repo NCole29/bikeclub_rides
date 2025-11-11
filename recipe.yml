@@ -56,11 +56,12 @@ config:
             - entity.node.webform.user.drafts
             - entity.node.webform.user.submissions
         webform_submission_bulk_form: false
-      user.role.site_admin:
+    user.role.site_admin:
       createIfNotExists:
         label: 'Site administrator'
       grantPermissions:
         - 'add club_route entity'
+        - 'administer rwgps_api_form'
         - 'clone recurring_ride content'
         - 'clone ride content'
         - 'create recurring_ride content'
@@ -73,6 +74,8 @@ config:
         - 'edit club_route entity'
         - 'edit club_schedule entity'
         - 'enter waivers'
+        - 'make smart dates recur'
+        - 'reschedule smart date recur instances'
         - 'revert recurring_ride revisions'
         - 'revert ride revisions'
         - 'use text format ride_page'
@@ -96,6 +99,8 @@ config:
         - 'edit club_route entity'
         - 'edit club_schedule entity'
         - 'enter waivers'
+        - 'make smart dates recur'
+        - 'reschedule smart date recur instances'
         - 'revert recurring_ride revisions'
         - 'revert ride revisions'
         - 'use text format ride_page'
@@ -106,7 +111,6 @@ config:
       createIfNotExists:
         label: 'Ride leader'
       grantPermissions:
-        - 'create ride content'
         - 'add club_route entity'
         - 'clone recurring_ride content'
         - 'clone ride content'
@@ -117,9 +121,15 @@ config:
         - 'edit own recurring_ride content'
         - 'edit own ride content'
         - 'enter waivers'
+        - 'make smart dates recur'
+        - 'reschedule smart date recur instances'
         - 'use text format ride_page'
         - 'view club_schedule entity'
         - 'view recurring_ride revisions'
         - 'view ride revisions'
-
+    user.role.membership:
+      createIfNotExists:
+        label: 'Membership coordinator'
+      grantPermissions:
+        - 'enter waivers'
  

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: day_date_and_time
+label: 'Day, date, and time'
+date_format: 'l, M d, Y'
+time_format: 'g:ia'
+time_hour_format: ga
+allday_label: 'All day'
+separator: ' -  '
+join: '  at '
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '1'
