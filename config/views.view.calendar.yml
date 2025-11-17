@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_location
     - field.storage.node.field_recurid
     - node.type.event
-    - node.type.recurring_dates
+    - node.type.recurring_date
     - node.type.ride
     - system.menu.account
   module:
@@ -135,7 +135,7 @@ display:
           operator: in
           value:
             event: event
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             ride: ride
           group: 1
           exposed: false
@@ -484,7 +484,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if type == 'recurring_dates' %}\r\n  {{ title_1 }}\r\n{% elseif type == 'event' %}\r\n  <h3>{{ title }} </h3>\r\n{% else %}\r\n  {{ title }}\r\n{% endif %}\r\n"
+            text: "{% if type == 'recurring_date' %}\r\n  {{ title_1 }}\r\n{% elseif type == 'event' %}\r\n  <h3>{{ title }} </h3>\r\n{% else %}\r\n  {{ title }}\r\n{% endif %}\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -839,7 +839,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
           group: 2
           exposed: false
           expose:

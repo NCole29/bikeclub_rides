@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - node
-id: recurring_dates
-label: 'Recurring dates'
+id: recurring_date
+label: 'Recurring date'
 type: 'canonical_entities:node'
 pattern: 'ride/[node:title]/[node:field_date:date:html_date]'
 selection_criteria:
@@ -15,7 +15,7 @@ selection_criteria:
     context_mapping:
       node: node
     bundles:
-      recurring_dates: recurring_dates
+      recurring_date: recurring_date
 selection_logic: and
 weight: -5
 relationships: {  }

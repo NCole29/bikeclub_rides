@@ -9,7 +9,7 @@ dependencies:
     - field.storage.node.field_dayofweek
     - field.storage.node.field_location
     - field.storage.node.field_ride_leader
-    - node.type.recurring_dates
+    - node.type.recurring_date
     - node.type.recurring_ride
     - node.type.ride
     - system.menu.main
@@ -566,8 +566,8 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags: {  }
-  recurring_dates:
-    id: recurring_dates
+  recurring_date:
+    id: recurring_date
     display_title: 'Recurring dates'
     display_plugin: page
     position: 1
@@ -1240,7 +1240,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
           group: 1
           exposed: false
           expose:
@@ -1311,7 +1311,7 @@ display:
           empty: false
           content: 'Displaying @start - @end of @total'
       display_extenders: {  }
-      path: admin/content/rides/recurring_dates
+      path: admin/content/rides/recurring_date
       menu:
         type: tab
         title: 'Recurring dates'

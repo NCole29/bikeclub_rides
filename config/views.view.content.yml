@@ -562,7 +562,7 @@ display:
           operator: 'not in'
           value:
             location: location
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             recurring_ride: recurring_ride
             ride: ride
           group: 1

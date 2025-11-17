@@ -21,9 +21,9 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Recurring dates'
-type: recurring_dates
-description: "Recur dates is automatically populated when a Recurring Ride is saved, generating one \"node\" for each date.\r\nThis content type is used to speed the calendar rendering. Links on the calendar refer to the original Recurring Ride.  \r\n"
+name: 'Recurring date'
+type: recurring_date
+description: "Recurring dates are automatically populated when a Recurring Ride is saved, generating one \"node\" for each date.\r\nThis content type is used to speed calendar rendering. Links on the calendar refer to the original Recurring Ride.  \r\n"
 help: null
 new_revision: false
 preview_mode: 0

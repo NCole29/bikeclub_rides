@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_cancel
     - field.storage.node.field_date
-    - node.type.recurring_dates
+    - node.type.recurring_date
     - node.type.ride
   module:
     - datetime
@@ -272,7 +272,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             ride: ride
           group: 1
           exposed: false
@@ -620,7 +620,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             ride: ride
           group: 1
           exposed: false

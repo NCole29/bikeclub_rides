@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.recurring_dates.field_cancel
-    - field.field.node.recurring_dates.field_date
-    - field.field.node.recurring_dates.field_dayofweek
-    - field.field.node.recurring_dates.field_recurid
-    - node.type.recurring_dates
+    - field.field.node.recurring_date.field_cancel
+    - field.field.node.recurring_date.field_date
+    - field.field.node.recurring_date.field_dayofweek
+    - field.field.node.recurring_date.field_recurid
+    - node.type.recurring_date
   module:
     - datetime
     - user
-id: node.recurring_dates.default
+id: node.recurring_date.default
 targetEntityType: node
-bundle: recurring_dates
+bundle: recurring_date
 mode: default
 content:
   field_cancel:

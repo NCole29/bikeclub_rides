@@ -5,7 +5,7 @@ dependencies:
     - field.storage.node.field_date
     - field.storage.node.field_recurid
     - field.storage.node.field_ride_leader
-    - node.type.recurring_dates
+    - node.type.recurring_date
     - node.type.ride
   module:
     - datetime
@@ -241,7 +241,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             ride: ride
           group: 1
           exposed: false
@@ -521,7 +521,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             ride: ride
           group: 1
           exposed: false
@@ -690,7 +690,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             ride: ride
           group: 1
           exposed: false
@@ -1087,7 +1087,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             ride: ride
           group: 1
           exposed: false
@@ -1872,7 +1872,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
             ride: ride
           group: 1
           exposed: false
@@ -2628,7 +2628,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recurring_dates: recurring_dates
+            recurring_date: recurring_date
           group: 1
           exposed: false
           expose:

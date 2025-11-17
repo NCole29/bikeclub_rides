@@ -3,12 +3,12 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_recurid
-    - node.type.recurring_dates
+    - node.type.recurring_date
     - node.type.recurring_ride
-id: node.recurring_dates.field_recurid
+id: node.recurring_date.field_recurid
 field_name: field_recurid
 entity_type: node
-bundle: recurring_dates
+bundle: recurring_date
 label: 'Recurring ride ID'
 description: "Node ID for recurring ride\r\n"
 required: false
