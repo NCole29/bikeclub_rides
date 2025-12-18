@@ -4,7 +4,7 @@ dependencies:
   module:
     - node
     - user
-id: content
+id: content_custom
 label: Content
 module: node
 description: 'Find and manage content.'

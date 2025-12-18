@@ -3,7 +3,7 @@ description: 'Provides Ride and Recurring ride content types.'
 type: 'Content type'
 recipes:
   - bikeclub_content_type_base
-  - bikeclub_field_storage_webform
+  - bikeclub_registration_field_storage
   - bikeclub_locations
 install:
   # Core
@@ -29,6 +29,7 @@ config:
   strict: false
   import:
     smart_date: '*'
+    webform: '*'
   actions:
     views_year_filter.settings:
       simpleConfigUpdate:
@@ -43,19 +44,7 @@ config:
               - entity.webform_submission.collection
             webform_routes: {  }
             node_routes: {  }
-        default_submission_views_replace:
-          global_routes:
-            - entity.webform_submission.collection
-            - entity.webform_submission.user
-          webform_routes:
-            - entity.webform.results_submissions
-            - entity.webform.user.drafts
-            - entity.webform.user.submissions
-          node_routes:
-            - entity.node.webform.results_submissions
-            - entity.node.webform.user.drafts
-            - entity.node.webform.user.submissions
-        webform_submission_bulk_form: false
+        file_public: true
     user.role.site_admin:
       createIfNotExists:
         label: 'Site administrator'
@@ -132,4 +121,150 @@ config:
         label: 'Membership coordinator'
       grantPermissions:
         - 'enter waivers'
- 
+    views.view.content:
+      simpleConfigUpdate:
+        display:
+          default:
+              fields:
+                created:
+                  settings:
+                    date_format: custom
+                    custom_date_format: m/d/Y
+                changed:
+                  settings:
+                    date_format: custom
+                    custom_date_format: 'm/d/Y g:i a'
+             filters:
+                title:
+                  id: title
+                  table: node_field_data
+                  field: title
+                  relationship: none
+                  group_type: group
+                  entity_type: node
+                  entity_field: title
+                  plugin_id: string
+                  operator: contains
+                  group: 1
+                  exposed: true
+                  expose:
+                    operator_id: title_op
+                    label: Title
+                    description: ''
+                    use_operator: false
+                    operator: title_op
+                    operator_limit_selection: false
+                    operator_list: {  }
+                    identifier: title
+                    required: false
+                    remember: false
+                    multiple: false
+                    remember_roles:
+                      authenticated: authenticated
+                  is_grouped: false
+                  group_info:
+                    label: ''
+                    description: ''
+                    identifier: ''
+                    optional: true
+                    widget: select
+                    multiple: false
+                    remember: false
+                    default_group: All
+                    default_group_multiple: {  }
+                    group_items: {  }
+                type:
+                  id: type
+                  table: node_field_data
+                  field: type
+                  relationship: none
+                  group_type: group
+                  admin_label: ''
+                  entity_type: node
+                  entity_field: type
+                  plugin_id: bundle
+                  operator: in
+                  value:
+                    announcement: announcement
+                    page: page
+                    event: event
+                    faqs: faqs
+                    banner: banner
+                  group: 1
+                  exposed: true
+                  expose:
+                    operator_id: type_op
+                    label: 'Content type'
+                    use_operator: false
+                    operator: type_op
+                    operator_limit_selection: false
+                    identifier: type
+                    remember_roles:
+                      authenticated: authenticated
+                    reduce: true
+                  is_grouped: false
+                status:
+                  id: status
+                  table: node_field_data
+                  field: status
+                  group_type: group
+                  entity_type: node
+                  entity_field: status
+                  plugin_id: boolean
+                  operator: '='
+                  value: '1'
+                  group: 1
+                  exposed: true
+                  expose:
+                    operator_id: ''
+                    label: Status
+                    description: ''
+                    use_operator: false
+                    operator: status_op
+                    operator_limit_selection: false
+                    operator_list: {  }
+                    identifier: status
+                    remember_roles:
+                      authenticated: authenticated
+                  is_grouped: true
+                  group_info:
+                    label: 'Published status'
+                    description: ''
+                    identifier: status
+                    optional: true
+                    widget: select
+                    multiple: false
+                    remember: false
+                    default_group: All
+                    default_group_multiple: {  }
+                    group_items:
+                      1:
+                        title: Published
+                        operator: '='
+                        value: '1'
+                      2:
+                        title: Unpublished
+                        operator: '='
+                        value: '0'
+                type_1:
+                  id: type_1
+                  table: node_field_data
+                  field: type
+                  relationship: none
+                  group_type: group
+                  entity_type: node
+                  entity_field: type
+                  plugin_id: bundle
+                  operator: 'not in'
+                  value:
+                    location: location
+                    recurring_date: recurring_date
+                    recurring_ride: recurring_ride
+                    ride: ride
+                  group: 1
+                  exposed: false
+                  is_grouped: false
+              filter_groups:
+                operator: AND
+                groups:
+                  1: AND

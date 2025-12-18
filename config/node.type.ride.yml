@@ -23,8 +23,8 @@ third_party_settings:
     unpublish_revision: false
 name: Ride
 type: ride
-description: '<em>Rides</em> occur on a single date. Rides automatically appear on the calendar and in the sidebar of the home page. To repeat a <em>Ride</em> on a new date, use the Clone feature. '
-help: 'Use this form to create a <strong>NEW</strong> ride. To <strong>update an existing</strong> ride <a href="/admin/content/rides">find the ride</a> and edit it. To copy a ride (for a new year),  <a href="/admin/content/rides">find the ride</a> and clone it.'
+description: '<em>Rides</em> occur on a single date. Rides automatically appear on the calendar and on the home page. To repeat a <em>Ride</em> on a new date, use the Clone feature. '
+help: 'Use this form to create a <strong>NEW</strong> ride. To <strong>update an existing</strong> ride <a href="/admin/content/rides">find the ride</a> and edit it. To copy a ride (for a new date), <a href="/admin/content/rides">find the ride</a> and clone it.'
 new_revision: true
 preview_mode: 1
 display_submitted: false

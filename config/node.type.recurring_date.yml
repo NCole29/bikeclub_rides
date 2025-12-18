@@ -23,7 +23,7 @@ third_party_settings:
     unpublish_revision: false
 name: 'Recurring date'
 type: recurring_date
-description: "Recurring dates are automatically populated when a Recurring Ride is saved, generating one \"node\" for each date.\r\nThis content type is used to speed calendar rendering. Links on the calendar refer to the original Recurring Ride.  \r\n"
+description: "Recurring dates are automatically populated when a Recurring Ride is saved, generating one \"node\" for each date.\r\nThis content type is used to speed calendar rendering. Links on the calendar go to the original Recurring Ride."
 help: null
 new_revision: false
 preview_mode: 0
