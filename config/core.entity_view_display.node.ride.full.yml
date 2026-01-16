@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.full
@@ -27,7 +27,6 @@ dependencies:
     - node.type.ride
     - views.view.ride_routes
   module:
-    - bikeclub
     - datetime
     - layout_builder
     - layout_builder_restrictions

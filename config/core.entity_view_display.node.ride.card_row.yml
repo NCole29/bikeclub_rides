@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.card_row
@@ -26,7 +26,6 @@ dependencies:
     - field.field.node.ride.field_webform_limit
     - node.type.ride
   module:
-    - bikeclub
     - datetime
     - text
     - user
